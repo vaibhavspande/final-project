@@ -110,7 +110,7 @@ const UpdateProduct = () => {
     const getImage = async (imageName) => {
         setImage(prevState => ({
             ...prevState,
-            filepreview: `http://localhost:5000/file/product/${imageName}`
+            filepreview: `https://final-project-sepia-sigma.vercel.app/file/product/${imageName}`
             })
         )
     }
