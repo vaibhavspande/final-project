@@ -195,7 +195,7 @@ app.post('/addproduct', (req, res) => {
     const { serialNumber, name, brand } = req.body;
     addProduct(serialNumber, name, brand);
     res.send('Data inserted');
-
+  
 });
 
 app.listen(server, () => {
