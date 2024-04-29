@@ -190,7 +190,7 @@ app.get('/product/serialNumber', async (req, res) => {
     const data = await client.query(`SELECT serialNumber FROM product`);
     res.send(data.rows);
 });
-
+  
 app.post('/addproduct', (req, res) => {
     const { serialNumber, name, brand } = req.body;
     addProduct(serialNumber, name, brand);
