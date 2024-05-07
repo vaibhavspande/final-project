@@ -85,7 +85,7 @@ const AddProduct = () => {
     }, []);
 
     useEffect(() => {
-        Geocode.setApiKey('AIzaSyBT2ZVKsHlKMxCKN2bHExklJIcHLqZQ6C0')
+        Geocode.setApiKey('sdasdfasdfasdfasdfasdffsadfsdfdfdf')
         
         Geocode.fromLatLng(manuLatitude, manuLongtitude).then(
             (response) => {
