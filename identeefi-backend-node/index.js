@@ -5,10 +5,14 @@ const { Client } = require('pg')
 const path = require('path');
 const multer = require('multer');
 require('dotenv').config();
-
+const corsOptions = {
+    origin: 'https://final-project-ytai.vercel.app', // or 'http://localhost:3000' if testing locally
+    optionsSuccessStatus: 200
+  };
+  
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 const server = process.env.SERVER;
 
