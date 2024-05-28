@@ -67,7 +67,9 @@ export default function Login() {
             } else {
                 setErrMsg('Login Failed. Please try again later.');
             }
-            errRef.current.focus();
+            if (errRef.current) {
+                errRef.current.focus();
+            }
         }
     };
 
@@ -85,7 +87,7 @@ export default function Login() {
             backgroundRepeat: 'no-repeat',
             zIndex: -2,
         }}>
-
+  
             <Container component="main" maxWidth="sm">
                 <Box
                     sx={{

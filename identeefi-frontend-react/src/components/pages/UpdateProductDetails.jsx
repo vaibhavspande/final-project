@@ -92,7 +92,7 @@ const UpdateProductDetails = () => {
 
 
     useEffect(() => {
-        Geocode.setApiKey('AIzaSyB5MSbxR9Vuj1pPeGvexGvQ3wUel4znfYY')
+        Geocode.setApiKey('AIzxR9Vuj1pPeGvexGvQ3w4znfYY')
 
         Geocode.fromLatLng(currLatitude, currLongtitude).then(
             (response) => {
@@ -136,7 +136,7 @@ const UpdateProductDetails = () => {
        
 
     const getUsername = async (e) => {
-        const res = await axios.get(`https://final-project-sepia-sigma.vercel.app/profile/${auth.user}`)
+        const res = await axios.get(`http://localhost:5000/profile/${auth.user}`)
             .then(res => {
                 console.log(JSON.stringify(res?.data[0]));
                 setCurrName(res?.data[0].name);

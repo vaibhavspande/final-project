@@ -24,7 +24,7 @@ const Profile = () => {
     }
 
     const handleData = async (e) => {
-        const res = await axios.get(`https://final-project-sepia-sigma.vercel.app/profile/${auth.user}`)
+        const res = await axios.get(`http://localhost:5000/profile/${auth.user}`)
                
             .then(res => {
                 console.log(JSON.stringify(res?.data[0]));

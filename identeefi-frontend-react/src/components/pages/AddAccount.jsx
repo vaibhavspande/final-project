@@ -43,7 +43,7 @@ const AddAccount = () => {
         const data = new FormData();
         data.append("image", image.file);
 
-        axios.post("https://final-project-sepia-sigma.vercel.app/upload/profile", data, {
+        axios.post("http://localhost:5000/upload/profile", data, {
             headers: { "Content-Type": "multipart/form-data" }
         }).then(res => {
             console.log(res);

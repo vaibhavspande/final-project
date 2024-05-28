@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');   
 const { Client } = require('pg')
 const path = require('path');
 const multer = require('multer');
@@ -33,11 +33,11 @@ function createAccount(username, password, role) {
         }
     })
 }
-
+  
 function changePassword(username, password) {
     const res = client.query('UPDATE auth SET password = $1 WHERE username = $2', [password, username], (err, res) => {
-        if (err) {
-            console.log(err.message);
+        if (err) {  
+            console.log(err.message);   
         } else {
             console.log('Data update successful');
         }
@@ -106,7 +106,7 @@ app.post('/addaccount', (req, res) => {
     const { username, password, role } = req.body;
     createAccount(username, password, role);
     res.send('Data inserted');
-
+ 
 });
 
 app.post('/changepsw', (req, res) => {
