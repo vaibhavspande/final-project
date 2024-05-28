@@ -8,7 +8,7 @@ import abi from '../../utils/Identeefi.json';
 import QRCode from 'qrcode.react';
 import dayjs from 'dayjs';
 import useAuth from '../../hooks/useAuth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom'; 
 import Geocode from "react-geocode";
 
 const getEthereumObject = () => window.ethereum;
@@ -85,7 +85,7 @@ const AddProduct = () => {
     }, []);
 
     useEffect(() => {
-        Geocode.setApiKey('AIzaSyBTKsHlKKN2bHExklJIcHLqZC0')
+        Geocode.setApiKey('sdasdfasdfasdfasdfasdffsadfsdfdfdf')
         
         Geocode.fromLatLng(manuLatitude, manuLongtitude).then(
             (response) => {
