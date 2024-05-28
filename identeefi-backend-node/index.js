@@ -6,10 +6,12 @@ const path = require('path');
 const multer = require('multer');
 require('dotenv').config();
 const corsOptions = {
-    origin: 'https://final-project-ytai.vercel.app', // or 'http://localhost:3000' if testing locally
-    optionsSuccessStatus: 200
-  };
-  
+  origin: 'https://final-project-ytai.vercel.app', // Your front-end URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // HTTP methods to be allowed
+  allowedHeaders: ['Content-Type', 'Authorization'], // Headers to be allowed
+};
+
+
 const app = express();
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
